@@ -1,0 +1,20 @@
+#redGem {
+    color: white;
+    background-color: red;
+    border-color: pink;
+}
+#blueGem {
+    color: white;
+    background-color: blue;
+    border-color: lightblue;
+}
+#yellowGem {
+    color: white;
+    background-color: yellow;
+    border-color: lightyellow;
+}
+#greenGem {
+    color: white;
+    background-color: green;
+    border-color: lightgreen;
+}
