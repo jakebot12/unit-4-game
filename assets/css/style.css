@@ -1,20 +1,32 @@
 #redGem {
-    color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
     background-color: red;
     border-color: pink;
 }
 #blueGem {
-    color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
     background-color: blue;
     border-color: lightblue;
 }
 #yellowGem {
-    color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
     background-color: yellow;
     border-color: lightyellow;
 }
 #greenGem {
-    color: white;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
     background-color: green;
     border-color: lightgreen;
 }

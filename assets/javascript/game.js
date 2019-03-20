@@ -1,124 +1,221 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
+    var playerScore = 0;
+    var crystalOne;
+    var crystalTwo;
+    var crystalThree;
+    var crystalFour;
 
 
 
 
-var playerScore  = (yourScore += addToScore); 
-var random_target = 0;
-var random_result = 0;
-var losses ="";
-var wins = "";
-var crystals = "";
 
+    var targetScore = Math.floor(Math.random() * 101) + 19;
+    console.log("Target Score");
+    console.log(targetScore);
 
-var targetScore = Math.floor(Math.random() * 80) + 19;
-console.log(targetScore);
+    $("#target-score").text(targetScore);
 
-$("#target-score").text('Target Score: ' + targetScore);
+    var randomNum1 = Math.floor(Math.random() * 12) + 1;
+    var randomNum2 = Math.floor(Math.random() * 12) + 1;
+    var randomNum3 = Math.floor(Math.random() * 12) + 1;
+    var randomNum4 = Math.floor(Math.random() * 12) + 1;
+    var wins = 0;
+    var losses = 0;
 
+    $('#redGem').on("click", function () {
+        crystalOne = randomNum1;
+        playerScore += crystalOne;
 
-for (var i = 0; i < 1; i++) {
-    var randomValueOne = Math.floor(Math.random() * 5) + 1;
-    console.log(randomValueOne);
+        if (playerScore == targetScore) {
+            wins++;
+            $('#wins').text(wins);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal One: " + crystalOne);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("There's a WIN!!!");
 
-    var crystalOne = $("#crystals");
-    crystalOne.attr({"class":'crystalOne', "data-random": randomValueOne});
+        } else if (playerScore >= targetScore) {
+            losses++;
+            $('#losses').text(losses);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal One: " + crystalOne);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("Doooh! You took a loss! Try again!");
+        } else {
+            $("#player-score").text(playerScore);
+            console.log(playerScore);
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal One: " + crystalOne);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+        }
+    });
 
-    $(".crystals").append(crystalOne);
-    console.log(crystalOne);
-}
-for (var i = 0; i < 1; i++) {
-    var randomValueTwo = Math.floor(Math.random() * 10) + 5;
-    console.log(randomValueTwo);
+    $('#blueGem').on("click", function () {
+        crystalTwo = randomNum2;
+        playerScore += crystalTwo;
+        if (playerScore == targetScore) {
+            wins++;
+            $('#wins').text(wins);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Two: " + crystalTwo);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("There's a WIN!!!");
+        } else if (playerScore >= targetScore) {
+            losses++;
+            $('#losses').text(losses);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Two: " + crystalTwo);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("Doooh! You took a loss! Try again!");
+        } else {
+            $("#player-score").text(playerScore);
+            console.log(playerScore);
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Two: " + crystalTwo);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+        }
+    });
 
-    var crystalTwo = $("<div>");
-    crystalTwo.attr({"class":'crystalTwo', "data-random": randomValueTwo});
+    $('#yellowGem').on("click", function () {
+        crystalThree = randomNum3;
+        playerScore += crystalThree;
+        if (playerScore == targetScore) {
+            wins++;
+            $('#wins').text(wins);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Three: " + crystalThree);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("There's a WIN!!!");
+        } else if (playerScore >= targetScore) {
+            losses++;
+            $('#losses').text(losses);
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Three: " + crystalThree);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("Doooh! You took a loss! Try again!");
+        } else {
+            $("#player-score").text(playerScore);
+            console.log(playerScore);
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Three: " + crystalThree);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+        }
+    });
 
-    $(".crystals").append(crystalTwo);
-    console.log(crystalTwo);
-}
-for (var i = 0; i < 1; i++) {
-    var randomValueThree = Math.floor(Math.random() * 15) + 10;
-    console.log(randomValueThree);
+    $('#greenGem').on("click", function () {
+        crystalFour = randomNum4;
+        playerScore += crystalFour;
 
-    var crystalThree = $("<div>");
-    crystalThree.attr({"class":'crystalThree', "data-random": randomValueThree});
+        if (playerScore == targetScore) {
+            wins++;
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Four: " + crystalFour);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            alert("There's a WIN!!!");
+        } else if (playerScore >= targetScore) {
+            losses++;
+            playerScore = 0;
+            $('#player-score').text(playerScore);
+            targetScore = Math.floor(Math.random() * 101) + 19;
+            $("#target-score").text(targetScore);
+            randomNum1 = Math.floor(Math.random() * 12) + 1;
+            randomNum2 = Math.floor(Math.random() * 12) + 1;
+            randomNum3 = Math.floor(Math.random() * 12) + 1;
+            randomNum4 = Math.floor(Math.random() * 12) + 1;
+            console.log("Crystal Four: " + crystalFour);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            alert("Doooh! You took a loss! Try again!");
+        } else {
+            $("#player-score").text(playerScore);
+            console.log(playerScore);
+            $('#wins').text(wins);
+            $('#losses').text(losses);
+            console.log("Crystal Four: " + crystalFour);
+            console.log("Player Score: " + playerScore);
+            console.log("Target Score: " + targetScore);
 
-    $(".crystals").append(crystalThree);
-    console.log(crystalThree);
-}
-for (var i = 0; i < 1; i++) {
-    var randomValueFour = Math.floor(Math.random() * 20) + 15;
-    console.log(randomValueFour);
+        }
+    });
 
-    var crystalFour = $("<div>");
-    crystalFour.attr({"class":'crystalFour', "data-random": randomValueFour});
-
-    $(".crystals").append(crystalFour);
-    console.log(crystalFour);
-}
-
-function addToScore(val) {
-  var numberToAdd = parseInt(val);
-  var currentScore = parseInt(yourScore.innerHTML);
-  yourScore.innerHTML = numberToAdd + currentScore;
-}
-
-function reset() {
-    
-}
-var redGem = document.getElementById("redGem");
-
-
-var blueGem = document.getElementById("blueGem");
-
-
-var yellowGem = document.getElementById("yellowGem");
-
-
-var greenGem = document.getElementById("greenGem");
-
-
-
-redGem.addEventListener('click', function() {
- 
-  addToScore(this.value);
-  checkScore();
 });
 
-blueGem.addEventListener('click', function() {
-  
-  addToScore(this.value);
-  checkScore();
-});
-
-yellowGem.addEventListener('click', function() {
- 
-  addToScore(this.value);
-  checkScore();
-});
-
-greenGem.addEventListener('click', function() {
-
-  addToScore(this.value);
-  checkScore();
-});
-
-function getRandomValue (){
-  return Math.floor(Math.random() * 80) + 19;
-}
-
-function targetScore() {
-  var playerScore = parseInt(yourScore.innerHTML);
-  var targetScore = parseInt(targetScore.innerHTML);
-  if (playerScore === targetScore) {
-      alert('You win!');
-      
-  } else if (playerScore > targetScore) {
-    alert('You lose!');
-  } 
-}
-
-console.log(getRandomValue());
-});

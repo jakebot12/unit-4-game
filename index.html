@@ -2,67 +2,99 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8">
-    <title>Crystals Collector</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <div class="container">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Crystals Collector</title>
 
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    </div>
 
 </head>
 
 
 <body>
+    <div class="jumbotron">
+        <div class="container jumbotron-fluid">
 
-    <h1>Crystals Collector!</h1>
+            <div class="row container mr-auto">
+                <div class="container col-lg-4 mr-auto"></div>
+                <div class="container col-auto mr-auto bg-light">
+                    <h1>Gems Collector!</h1>
+                </div>
+                <div class="container col-lg-4 mr-auto"></div>
+            </div>
 
-    <h2>Rules:</h2>
-    <p>You will be given a random number at the start of the game. </p>
+            <div class="container col-auto mr-auto bg-white">
+                <h2>Rules:</h2>
+            </div>
 
-    <p>There are four crystals below. By clicking on a
-        crystal you will add a specific amount of points to your total score.
+            <div class="row container col-auto mr-auto bg-white">
+                <p>You will be given a random number at the start of the game. </p>
 
-        <p>You win the game by matching your total
-            score to the ramdom number, you lose the game if your total score goes above the random number.</p>
+                <p>There are four crystals below. By clicking on a
+                    crystal you will add a specific amount of points to your total score.</p>
 
-        <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>You win the game by matching your total
+                    score to the ramdom number, you lose the game if your total score goes above the random number.</p>
 
-        <p> time when the game starts, the game will
-            change the values of each crystal.</p>
-        <br>
-        <div class="row container">
-            <h3 class="col-sm-3"></h3>
-            <h3 class="col-sm-3">Target Score:
-                <span id='target-score'>0</span>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
 
-                <div class="row container">
-            </h3>
-            <h3 class="col-sm-2 ">Wins: <span id='wins'>0</span>
-            </h3>
+                <p> time when the game starts, the game will
+                    change the values of each crystal.</p>
+
+            </div>
+
+            <div class="row container col-auto mr-auto p-2">
+                <h3 class="col-auto">Target Score: <span id='target-score'>0</span>
+            </div>
+
+            <div class="row container col-auto mr-auto p-2">
+                <h3 class="col-auto ">Wins: <span id='wins'>0</span>
+            </div>
+
+            <div class="row container col-auto mr-auto p-2">
+                <h3 class="col-auto ">Losses: <span id='losses'>0</span>
+            </div>
+
+            <div class="row container p-3 bg-white">
+                <div class="box col-lg-3 p-3 container-fluid">
+                    <button type="button" class="crystal one" id="redGem" value="randomValueOne">Ruby</button>
+                </div>
+                <div class="button col-lg-3 p-3 mr-auto container-fluid">
+                    <button type="button" class="crystal two" id="blueGem" value="randomValueTwo">Saffire</button>
+                </div>
+                <div class="button col-lg-3 p-3 mr-auto container-fluid">
+                    <button type="button" class="crystal three" id="yellowGem" value="randomValueThree">Citrine</button>
+                </div>
+                <div class="button col-lg-3 mr-auto p-3 container-fluid">
+                    <button type="button" class="crystal four" id="greenGem" value="randomeValueFour">Emerald</button>
+                </div>
+            </div>
+
+
+
+            <div class="row container col-auto mr-auto">
+                </h3>
+                <h3 class="col-auto mr-auto p-2">Your Score: <span id='player-score'>0</span>
+                </h3>
+            </div>
         </div>
-
-        <div class="row container">
-            </h3>
-            <h3 class="col-sm-2 ">Losses: <span id='losses'>0</span>
-            </h3>
-        </div>
-
-        <br>
-
-        <div class="crystals">
-            <button class="crystalOne" id="redGem" value="randomValueOne">Ruby</button>
-            <button class="crystalTwo" id="blueGem" value="randomValueTwo">Saffire</button>
-            <button class="crystalThree" id="yellowGem" value="randomValueThree">Citrine</button>
-            <button class="crystalFour" id="greenGem" value="RandomeValueFour">Emerald</button>
-        </div>
-
-        <div class="row container">
-            </h3>
-            <h3 class="col-sm-2 ">Your Score: <span id='yourScore'>0</span>
-            </h3>
-        </div>
-
-        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 
