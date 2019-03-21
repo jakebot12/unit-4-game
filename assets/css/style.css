@@ -12,6 +12,11 @@ font-size: 18px;
 
 #targetScore {
     margin-left: -15px;
+    padding-top: 50px;
+}
+
+#h3TargetScore {
+    padding-top: 30px;
 }
 
 #redGem {
