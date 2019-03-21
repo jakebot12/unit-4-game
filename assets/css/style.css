@@ -10,6 +10,10 @@ font-size: 18px;
     font-style: bolder;
 }
 
+#targetScore {
+    margin-left: -15px;
+}
+
 #redGem {
     color: black;
     padding: 10px;

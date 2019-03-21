@@ -36,43 +36,37 @@
 
             <div class="row container col-lg-12 margin-auto bg-white p-2">
 
-                <li
-                 class="p">You will be given a random number at the start of the game.</li> 
+                <ol>
 
+                    <li class="p">You will be given a random number at the start of the game.</li>
 
+                    <li class="p">There are four crystals below. By clicking on a
+                        crystal you will add a specific amount of points to your total score.</li>
 
-                <li class="p">There are four crystals below. By clicking on a
-                    crystal you will add a specific amount of points to your total score.</li>
+                    <li class="p">You win the game by matching your total
+                        score to the ramdom number, you lose the game if your total score goes above the random number.
+                    </li>
 
+                    <li class="p">The value of each crystal is hidden from you until you click on it.</li>
 
-
-                <li class="p">You win the game by matching your total
-                    score to the ramdom number, you lose the game if your total score goes above the random number.
-                </li>
-
-
-
-                <li class="p">The value of each crystal is hidden from you until you click on it.</li>
-
-
-
-                <li class="p"> Each time when the game starts, the game will
-                    change the values of each crystal.</li>
-
+                    <li class="p"> Each time when the game starts, the game will
+                        change the values of each crystal.</li>
                 </ol>
 
             </div>
+            <div class="row col-lg-12">
+                <div id="targetScore" class="container col-lg-3 p-2 bg-light">
+                    <h3 class="col-auto">Target Score: <span id='target-score'>0</span>
+                </div>
+                <div class="container col-lg-9">
+                    <div class="row container col-auto mr-auto p-2">
+                        <h3 class="col-auto ">Wins: <span id='wins'>0</span>
+                    </div>
 
-            <div class="row container col-lg-3 mr-auto p-2 bg-light">
-                <h3 class="col-auto">Target Score: <span id='target-score'>0</span>
-            </div>
-
-            <div class="row container col-auto mr-auto p-2">
-                <h3 class="col-auto ">Wins: <span id='wins'>0</span>
-            </div>
-
-            <div class="row container col-auto mr-auto p-2">
-                <h3 class="col-auto ">Losses: <span id='losses'>0</span>
+                    <div class="row container col-auto mr-auto p-2">
+                        <h3 class="col-auto ">Losses: <span id='losses'>0</span>
+                    </div>
+                </div>
             </div>
 
             <div id="buttons" class="row container p-3 bg-white mr-auto">
