@@ -40,7 +40,6 @@ $(document).ready(function () {
             newRandomNumbers();
             $('#wins').text(wins);
             $('#losses').text(losses);
-            console.log("Crystal One: " + crystalOne);
             console.log("Player Score: " + playerScore);
             console.log("Target Score: " + targetScore);
             alert("There's a WIN!!!");
@@ -55,16 +54,13 @@ $(document).ready(function () {
             newRandomNumbers();
             $('#wins').text(wins);
             $('#losses').text(losses);
-            console.log("Crystal One: " + crystalOne);
             console.log("Player Score: " + playerScore);
             console.log("Target Score: " + targetScore);
             alert("Doooh! You took a loss! Try again!");
         } else {
             $("#player-score").text(playerScore);
-            console.log(playerScore);
             $('#wins').text(wins);
             $('#losses').text(losses);
-            console.log("Crystal One: " + crystalOne);
             console.log("Player Score: " + playerScore);
             console.log("Target Score: " + targetScore);
         }
@@ -72,28 +68,29 @@ $(document).ready(function () {
     $('#redGem').on("click", function () {
         crystalOne = randomNum1;
         playerScore += crystalOne;
+        console.log("Crystal One: " + crystalOne);
         checkWin();
-
     });
 
     $('#blueGem').on("click", function () {
         crystalTwo = randomNum2;
         playerScore += crystalTwo;
+        console.log("Crystal Two: " + crystalTwo);
         checkWin();
-
     });
 
     $('#yellowGem').on("click", function () {
         crystalThree = randomNum3;
         playerScore += crystalThree;
+        console.log("Crystal Three: " + crystalThree);
         checkWin();
     });
 
     $('#greenGem').on("click", function () {
         crystalFour = randomNum4;
         playerScore += crystalFour;
-        checkWin()
-
+        console.log("Crystal Four: " + crystalFour);
+        checkWin();
     });
 
 });
